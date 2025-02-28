@@ -1,0 +1,26 @@
+{
+  "name": "new-sdk",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.8.0",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "pretty": "turbo pretty",
+    "clean": "turbo clean && rm -rf node_modules && rm -rf dist && rm -rf .turbo"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "turbo": "^2.4.0"
+  },
+  "dependencies": {
+    "@cosmjs/cosmwasm-stargate": "^0.33.0",
+    "@cosmjs/stargate": "^0.33.0",
+    "@injectivelabs/networks": "^1.14.40",
+    "@injectivelabs/sdk-ts": "^1.14.40",
+    "@injectivelabs/utils": "^1.14.40"
+  }
+}

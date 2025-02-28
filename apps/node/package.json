@@ -1,0 +1,29 @@
+{
+  "name": "node",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "run": "pnpm run build && node dist/main.js",
+    "cosmos": "pnpm run build && node dist/cosmos.js",
+    "moneyMarket": "pnpm run build && node dist/moneymarket.js",
+    "example": "pnpm run build && node dist/examples/cosmos/index.js",
+    "build": "tsc",
+    "checkTs": "tsc --noEmit",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint . --apply",
+    "pretty": "biome format . --write",
+    "clean": "rm -rf node_modules && rm -rf dist && rm -rf .turbo "
+  },
+  "main": "dist/main.js",
+  "dependencies": {
+    "@new-world/sdk": "workspace:*",
+    "viem": "catalog:",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vite": "^5.1.4",
+    "@types/node": "catalog:"
+  },
+  "type": "module"
+}
